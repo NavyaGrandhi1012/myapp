@@ -1,17 +1,19 @@
-// typing effect
-let text = "We came as strangers...";
+const text = "We are strangers...";
 let i = 0;
 
-function type() {
+function typeEffect() {
     if (i < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(i);
         i++;
-        setTimeout(type, 80);
+        setTimeout(typeEffect, 100);
     } else {
-        setTimeout(() => {
-            document.getElementById("intro").style.display = "none";
-        }, 1500);
+        setTimeout(showImage, 1500);
     }
 }
 
-type();
+function showImage() {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("hero").style.display = "flex";
+}
+
+typeEffect();

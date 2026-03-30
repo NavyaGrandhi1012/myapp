@@ -1,87 +1,47 @@
+/* RESET */
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: black;
-    color: white;
-    overflow-x: hidden;
+    font-family: Arial;
 }
 
-/* INTRO */
+/* INTRO SCREEN */
 .intro {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    background: black;
+    color: white;
+    font-size: 40px;
 }
 
-/* HERO */
+/* HERO (HIDDEN INITIALLY) */
 .hero {
+    display: none;
     height: 100vh;
-    background: url('public.jpg') center/cover no-repeat;
-    position: relative;
-    filter: grayscale(40%);
-}
-
-/* OVERLAY */
-.overlay {
-    position: absolute;
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-}
 
-/* TEXT CENTER */
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
+    background-image: url('public.jpg');
+    background-size: contain;   /* FULL IMAGE */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
 
-/* MEMORIES */
-.memories {
-    padding: 80px;
-    text-align: center;
-}
-
-.memories h2 {
-    margin-bottom: 40px;
-}
-
-/* CARDS */
-.box {
-    margin: 20px auto;
-    padding: 20px;
-    width: 60%;
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    transition: 0.5s;
-}
-
-.box:hover {
-    transform: scale(1.1);
-    background: rgba(255,255,255,0.2);
-}
-
-/* FINAL */
-.final {
-    height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+/* TEXT ON IMAGE */
+.content {
+    color: white;
     text-align: center;
-    font-size: 28px;
 }
 
-/* FADE ANIMATION */
-.fade {
-    animation: fadeIn 2s ease-in-out;
+.content h1 {
+    font-size: 35px;
 }
 
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+.content p {
+    font-size: 18px;
 }
