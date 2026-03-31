@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone') {
             steps {
-                git 'YOUR_GITHUB_REPO_LINK'
+                git 'https://github.com/NavyaGrandhi1012/myapp.git'
             }
         }
 
