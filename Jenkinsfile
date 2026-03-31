@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh 'docker stop friends || true'
                 sh 'docker rm friends || true'
-                sh 'docker run -d -p 8080:80 --name friends friends-site'
+                sh 'docker run -d -p 8081:80 --name friends friends-site'
             }
         }
     }
